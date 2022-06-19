@@ -28,10 +28,10 @@ class TaggerMod(loader.Module):
 				else:
 					count = int(args[0])
 		txt = '<a href="tg://user?id={}">{}</a>'
-		await message.edit(txt.format(id, "Ну покормить меня! >=("))
+		await message.edit(txt.format(id, "Ну покорми ты меня! >=("))
 		for _ in range(count):
 			await sleep(0.3)
-			msg = await message.client.send_message(message.to_id, txt.format(id, "Покормить меня 🥟"), reply_to=message)
+			msg = await message.client.send_message(message.to_id, txt.format(id, "Покорми меня 🥟"), reply_to=message)
 			if not msg.is_reply:
 				await msg.edit("<b>Ураааааа!</b>")
 				break
